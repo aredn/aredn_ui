@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5. It is designed to serve as a new / alternative frontend for the AREDN project.
 
+## Requirements to run locally
+
+1) NodeJS (10+ is preferable)
+2) An accessible Aredn node for API requests.
+
+## First setup
+
+After installing NodeJS and cloning this repository run the command.
+
+`> npm install`
+
+You can get then follow the instructions below.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
