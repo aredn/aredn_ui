@@ -1,0 +1,32 @@
+<div class="card fluid">
+  <div class="section heading">Location</div>
+  <div class="section" *ngIf="data">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Latitude</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.lat || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Longitude</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.lon || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Grid Square</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.gridsquare || '-'}}</span>
+      </div>
+    </div>
+  </div>
+</div>

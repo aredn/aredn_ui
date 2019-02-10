@@ -1,0 +1,42 @@
+<div class="card fluid">
+  <div class="section heading">Device IP Addresses</div>
+  <div class="section" *ngIf="data">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>WiFi Address</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.wifi || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>LAN Address</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.lan || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>WAN Address</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.wan || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Default Gateway</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.gateway || '-'}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

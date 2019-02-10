@@ -1,0 +1,49 @@
+<div class="card fluid">
+  <div class="section heading">Memory And Storage</div>
+  <div class="section" *ngIf="data">
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Free RAM</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.freeram || '-'}}kb</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Shared RAM</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.sharedram || '-'}}kb</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+          <strong>Buffer RAM</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.bufferram || '-'}}kb</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+          <strong>Freespace /</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.rootfree || '-'}}kb</span>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <strong>Freespace /tmp</strong>
+        </div>
+        <div class="col-sm-4">
+          <span>{{data.tmpfree || '-'}}kb</span>
+        </div>
+      </div>
+  </div>
+</div>

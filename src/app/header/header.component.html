@@ -1,0 +1,46 @@
+<header style="height: auto" class="hidden-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg col-md">
+                <a routerLink="/" class="logo">
+                    <img src="assets/logo.png" style="width: 175px; height: 95px;">
+                </a>
+                <a routerLink="/status" routerLinkActive="strong" class="button">Status</a>
+                <a routerLink="/nodes" routerLinkActive="strong"  class="button">Nodes</a>
+                <a routerLink="/services" routerLinkActive="strong"  class="button">Services</a>
+                <a routerLink="/charts" routerLinkActive="strong"  class="button">Services</a>
+                <a routerLink="/wifiscan" routerLinkActive="strong"  class="button">Wifi Scan</a>
+                <a routerLink="/setup" routerLinkActive="strong"  class="button">Setup</a>
+                <a routerLink="/help" routerLinkActive="strong"  class="button">Help</a>
+            </div>
+            <div class="col-lg col-md" style="text-align: right">
+                <div>
+                    <h1>
+                        <span class="node-name">{{data?.node}}</span>
+                        <div>
+                            Location: {{data?.lat}} {{data?.lon}}
+                        </div>
+
+
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="hidden-md hidden-lg">
+    <label for="drawer-control" class="drawer-toggle"></label>
+
+    <input type="checkbox" id="drawer-control" class="drawer" #closeDrawer>
+    <div>
+        <label for="drawer-control" class="drawer-close"></label>
+        <a routerLink="/" routerLinkActive="strong" class="button">Status</a>
+        <a routerLink="/nodes" routerLinkActive="strong"  class="button">Nodes</a>
+        <a routerLink="/services" routerLinkActive="strong"  class="button">Services</a>
+        <a routerLink="/charts" routerLinkActive="strong"  class="button">Services</a>
+        <a routerLink="/wifiscan" routerLinkActive="strong"  class="button">Wifi Scan</a>
+        <a routerLink="/setup" routerLinkActive="strong"  class="button">Setup</a>
+        <a routerLink="/help" routerLinkActive="strong"  class="button">Help</a>
+    </div>
+</div>

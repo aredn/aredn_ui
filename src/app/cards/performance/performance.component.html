@@ -1,0 +1,40 @@
+<div class="card fluid">
+  <div class="section heading">Performance</div>
+  <div class="section" *ngIf="data">
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Uptime</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.uptime || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Load Avg (Last 1 min.)</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.loads[0] || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+          <strong>Load Avg (Last 5 min.)</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.loads[1] || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+          <strong>Load Avg (Last 15 min.)</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.loads[2] || '-'}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+{
+    "/cgi-bin/api/*": {
+      "target": "http://localnode.local.mesh:8080",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }

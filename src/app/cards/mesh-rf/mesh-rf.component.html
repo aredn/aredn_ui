@@ -1,0 +1,42 @@
+<div class="card fluid">
+  <div class="section heading">Mesh RF</div>
+  <div class="section" *ngIf="data">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>SSID</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.ssid || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Channel</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.channel || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Bandwidth</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.chanbw || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Frequency</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.frequency || '-'}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

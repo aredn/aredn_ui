@@ -1,0 +1,51 @@
+<div class="card fluid">
+  <div class="section heading">System Info</div>
+  <div class="section" *ngIf="data">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Model</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.model || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Firmware Version</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.firmware_version || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+          <strong>Uptime</strong>
+        </div>
+        <div class="col-sm-4">
+          <span>{{data.uptime || '-'}}</span>
+        </div>
+      </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Date</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.date || '-'}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <strong>Time</strong>
+      </div>
+      <div class="col-sm-4">
+        <span>{{data.time || '-'}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

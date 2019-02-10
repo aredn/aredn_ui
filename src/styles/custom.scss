@@ -1,0 +1,15 @@
+// Add background a bold to a section marked with the heading class
+// class="section heading"
+.card > .section.heading {
+    background: #aabad4;
+    font-weight: bold;
+}
+
+header .node-name {
+    color: rgb(190,30,44);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+.strong {
+    font-weight: bold;
+}
