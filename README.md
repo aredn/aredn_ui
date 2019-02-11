@@ -19,8 +19,8 @@ You can get then follow the instructions below.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-The code expects an AREDN node to be running at http://localnode.local.mesh:8080, as defined in the proxy.conf.json file at the root of the project.
-This allows the front-end project to make API requests to the localnode as if the frontend were actually running on the node itself.
+The code expects an AREDN node to be running at http://localnode.local.mesh:8080, as defined in the proxy.conf.json file at the root of the project.  To use this file to develop/test remotely, run `ng serve --proxy-config proxy.conf.json`.
+This allows the front-end project to make API requests to the localnode (or other node specified in proxy.conf.json) as if the frontend were actually running on the node itself.  The node must be running an AREDN nightly build at version 637 or higher.
 
 ## Build
 
