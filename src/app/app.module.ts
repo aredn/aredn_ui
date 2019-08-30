@@ -29,6 +29,7 @@ import { ToneComponent } from './charts-page/tone/tone.component';
 import { AudioContextModule } from 'angular-audio-context';
 import { FormsModule } from '@angular/forms';
 import { LineChartModule } from '@swimlane/ngx-charts';
+// TODO: Is this needed, how much size does it add?
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /**
@@ -66,12 +67,15 @@ export const httpInterceptorProviders = [
   ],
   imports: [
     BrowserModule,
+    // TODO: Is this needed, how much size does it add?
+    // If it is needed, lazy load.
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     NgArrayPipesModule,
     AudioContextModule.forRoot('balanced'),
     FormsModule,
+    // TODO: Lazy Load
     LineChartModule
   ],
   providers: [
