@@ -8,6 +8,8 @@ import { ApiDataLink } from './data-links/api-data-link';
 })
 export class ScanPageDataService extends ReadOnlyDataService<ArednApi.ApiResponse> {
     constructor(http: HttpClient) {
-        super(new ApiDataLink('scan', http));
+        super(
+            new ApiDataLink('scan', http)
+        );
     }
 }
