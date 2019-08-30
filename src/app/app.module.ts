@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,10 +21,15 @@ import { SignalIconComponent } from './scan-page/signal-icon/signal-icon.compone
 import { SortIconComponent } from './scan-page/sort-icon/sort-icon.component';
 import { ScanListResultsComponent } from './scan-page/scan-list-results/scan-list-results.component';
 import { NgArrayPipesModule } from 'ngx-pipes';
+
+import { LoadingMessageComponent } from './loading-message/loading-message.component';
+import { LoadingMessageInterceptor } from './loading-message/loading-message-inteceptor.service';
+
 import { ToneComponent } from './charts-page/tone/tone.component';
 import { AudioContextModule } from 'angular-audio-context';
 import { FormsModule } from '@angular/forms';
 import { LineChartModule } from '@swimlane/ngx-charts';
+// TODO: Is this needed, how much size does it add?
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /**
@@ -39,12 +44,18 @@ const CardComponents = [
   MemoryAndStorageComponent
 ];
 
+/** Http interceptor providers in outside-in order */
+export const httpInterceptorProviders = [
+  { provide: HTTP_INTERCEPTORS, useClass: LoadingMessageInterceptor, multi: true },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     StatusPageComponent,
     NodesPageComponent,
+    LoadingMessageComponent,
     ...CardComponents,
     ScanPageComponent,
     ChartsPageComponent,
@@ -56,15 +67,21 @@ const CardComponents = [
   ],
   imports: [
     BrowserModule,
+    // TODO: Is this needed, how much size does it add?
+    // If it is needed, lazy load.
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     NgArrayPipesModule,
     AudioContextModule.forRoot('balanced'),
     FormsModule,
+    // TODO: Lazy Load
     LineChartModule
   ],
-  providers: [DatePipe],
+  providers: [
+    httpInterceptorProviders,
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
