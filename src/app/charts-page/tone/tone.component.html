@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>SNR: <span id='snr'>{{snr}}</span>dB</h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <fieldset>
+    <legend>Sound</legend>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="button-group">
+          <button id='toneOn' (click)='toneOn()' [disabled]="toneActive">On</button>
+          <button id='toneOff' (click)='toneOff()' [disabled]="!toneActive">Off</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <small>Pitch</small>
+      </div>
+      <div class="col-md-9">
+        <input type='range' id='tonePitch' name='tonePitch' min='5' max='100' [(ngModel)]="pitch"
+          (change)="onSettingsChanged()" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <small>Volume</small>
+      </div>
+      <div class="col-md-9">
+        <input type='range' id='toneVol' name='toneVol' min='0' max='10' [(ngModel)]="volume"
+          (change)="onSettingsChanged()" />
+      </div>
+    </div>
+  </fieldset>
+</div>

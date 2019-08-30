@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IDataLink } from '../core/IDataLink';
+import { ArednApi } from '../../ArednApi';
 
 /**
  * Data link implemnations using HTTP to access to the Node's API service.

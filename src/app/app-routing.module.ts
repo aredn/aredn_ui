@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NodesPageComponent } from './nodes-page/nodes-page.component';
 import { StatusPageComponent } from './status-page/status-page.component';
 import { ScanPageComponent } from './scan-page/scan-page.component';
+import { ChartsPageComponent } from './charts-page/charts-page.component';
 
 const routes: Routes = [
   {
@@ -14,8 +15,8 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'status',
-        component: StatusPageComponent
+        path: 'charts',
+        component: ChartsPageComponent
       },
       {
         path: 'nodes',
@@ -24,6 +25,10 @@ const routes: Routes = [
       {
         path: 'scan',
         component: ScanPageComponent
+      },
+      {
+        path: 'status',
+        component: StatusPageComponent
       }
     ]
   },

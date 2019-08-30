@@ -5,6 +5,7 @@ import {
   SimpleChanges,
   OnChanges
 } from "@angular/core";
+import { ArednApi } from '../../../ArednApi';
 
 @Component({
   selector: "aredn-scan-list-results",
@@ -17,12 +18,12 @@ export class ScanListResultsComponent implements OnInit, OnChanges {
 
   @Input() results: ArednApi.ScanListResult[] = [];
 
-  constructor() {}
+  constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.orderBy(this.orderByProperty, null, this.orderByDescending);
   }
-  ngOnInit() {}
+  ngOnInit() { }
 
   orderBy(property: string, $event?: MouseEvent, descending?: boolean) {
     //if this is being called from an anchor tag, stop the page from refreshing

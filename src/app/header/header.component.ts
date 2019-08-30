@@ -5,6 +5,7 @@ import { StatusPageDataService } from '../status-page-data.service';
 import { StatusPageSections } from '../constants';
 import { takeUntil } from 'rxjs/operators';
 import { Router, NavigationEnd } from '@angular/router';
+import { ArednApi } from '../../ArednApi';
 
 @Component({
   selector: 'aredn-header',
@@ -26,14 +27,14 @@ export class HeaderComponent extends DisposableComponent implements OnInit, OnDe
 
   ngOnInit() {
     this.router.events
-    .pipe(
-      takeUntil(this.disposer)
-    )
-    .subscribe(event => {
+      .pipe(
+        takeUntil(this.disposer)
+      )
+      .subscribe(event => {
         if (event instanceof NavigationEnd) {
           this.cd.markForCheck();
         }
-    });
+      });
 
     observableCombineLatest(
       this.dataService.get<ArednApi.Location>(StatusPageSections.location),

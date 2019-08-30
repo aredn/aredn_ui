@@ -3,6 +3,7 @@ import { takeUntil } from 'rxjs/operators';
 import { StatusPageSections } from '../../constants';
 import { DisposableComponent } from '../../DisposableComponent';
 import { StatusPageDataService } from '../../status-page-data.service';
+import { ArednApi } from '../../../ArednApi';
 
 @Component({
   selector: 'aredn-system-info',

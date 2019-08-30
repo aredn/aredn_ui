@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-10">
+
+    </div>
+    <div class="col-md-2 right">
+        <button *ngIf="!polling" class="button primary" (click)="onStartPolling()">Start</button>
+        <button *ngIf="polling" class="button secondary" (click)="onStopPolling()">Stop</button>
+        <button class="button" (click)="onGetArchive()">Archive</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <aredn-tone [snr]="snr" [feedActive]="polling"></aredn-tone>
+    </div>
+    <div class="col-md-10">
+        <aredn-signal-chart [data]="results"></aredn-signal-chart>
+    </div>
+</div>
+<span class="toast error" *ngIf="!isConnected"><b>No signal:</b> Are there any other nodes connected?</span>

@@ -5,10 +5,10 @@ import { ApiDataLink } from './data-links/api-data-link';
 import { ArednApi } from '../ArednApi';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class StatusPageDataService extends ReadOnlyDataService<ArednApi.ApiResponse> {
-    constructor(http: HttpClient) {
-        super(new ApiDataLink('status', http));
-    }
+export class ChartPageDataService extends ReadOnlyDataService<ArednApi.ApiResponse> {
+  constructor(http: HttpClient) {
+    super(new ApiDataLink('chart', http));
+  }
 }
